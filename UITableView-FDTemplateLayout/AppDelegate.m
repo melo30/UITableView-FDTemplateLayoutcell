@@ -5,7 +5,20 @@
 //  Created by 陈诚 on 2017/5/5.
 //  Copyright © 2017年 陈诚. All rights reserved.
 //
-
+/*
+ 用法
+ #import "UITableView+FDTemplateLayoutCell.h"
+ 
+ - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ return [tableView fd_heightForCellWithIdentifier:@"reuse identifer" configuration:^(id cell) {
+ // Configure this cell with data, same as what you've done in "-tableView:cellForRowAtIndexPath:"
+ // Like:
+ //    cell.entity = self.feedEntities[indexPath.row];
+ }];
+ }
+ 
+ */
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
